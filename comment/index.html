@@ -1,102 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>How to make a comment box in HTML</title>
-    <link rel="stylesheet" type="text/css" href="/css/smart-forms.css">
-    <link href="/css/bluetheme.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Feedback Form</title>	
 
-</head>
-<body>
-    <div class="smart-wrap">
-        <div class="smart-forms smart-container wrap-3">
+<h1 align="center">Feedback Form</h1>
 
-            <div class="form-header header-blue">
-                <h4><i class="fa fa-comments"></i> Name Suggestion </h4>
-            </div><!-- end .form-header section -->
-
-            <form method="post" action="/" id="comment2">
-                <div class="form-body theme-blue">
-
-                    <div class="section">
-                        <label class="field prepend-icon">
-                            <input type="text" name="names" id="names" class="gui-input" placeholder="Enter name...">
-                            <span class="field-icon"><i class="fa fa-user"></i></span>
-                        </label>
-                    </div><!-- end section -->
-
-                    <div class="section">
-                        <label class="field prepend-icon">
-                            <input type="email" name="email" id="email" class="gui-input" placeholder="Enter Email...">
-                            <span class="field-icon"><i class="fa fa-envelope"></i></span>
-                        </label>
-                    </div><!-- end section -->
-
-                    <div class="section">
-                        <label class="field prepend-icon">
-                            <input type="url" name="website" id="website" class="gui-input" placeholder="Your Telegram Username/id">
-                            <span class="field-icon"><i class="fa fa-globe"></i></span>
-                        </label>
-                    </div><!-- end section -->
-
-                    <div class="section">
-                        <label class="field prepend-icon">
-                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Enter Suggestion"></textarea>
-                            <span class="field-icon"><i class="fa fa-comments"></i></span>
-                            <span class="input-hint">
-                                <strong>YOU CAN USE HTML TAGS:</strong>
-                                &lt;blockquote&gt;, &lt;strong&gt;&lt;a&gt;, &lt;b&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;code&gt;
-                            </span>
-                        </label>
-                    </div><!-- end section -->
-
-                    <div class="section">
-                        <label class="option option-blue">
-                            <input type="checkbox" name="check1">
-                            <span class="checkbox"></span> Notify me with comment updates
-                        </label>
-                    </div><!-- end section -->
-
-                    <div class="spacer-b30">
-                        <div class="tagline"><span>Just a moment </span></div><!-- .tagline -->
-                    </div>
-
-                    <div class="section">
-
-                        <span class="rating block">
-
-                            <span class="lbl-text">Rate this article</span>
-
-                            <input class="rating-input" id="five-stars" type="radio" name="article-rate">
-                            <label class="rating-star" for="five-stars"><i class="fa fa-star"></i></label>
-
-                            <input class="rating-input" id="four-stars" type="radio" name="article-rate">
-                            <label class="rating-star" for="four-stars"><i class="fa fa-star"></i></label>
-
-                            <input class="rating-input" id="three-stars" type="radio" name="article-rate" checked>
-                            <label class="rating-star" for="three-stars"><i class="fa fa-star"></i></label>
-
-                            <input class="rating-input" id="two-stars" type="radio" name="article-rate">
-                            <label class="rating-star" for="two-stars"><i class="fa fa-star"></i></label>
-
-                            <input class="rating-input" id="one-star" type="radio" name="article-rate">
-                            <label class="rating-star" for="one-star"><i class="fa fa-star"></i></label>
-
-                        </span>
-
-                    </div><!-- end  section -->
-
-                </div><!-- end .form-body section -->
-                <div class="form-footer">
-                    <button type="submit" class="button btn-blue">Post Comment</button>
-                </div><!-- end .form-footer section -->
-            </form>
-
-        </div><!-- end .smart-forms section -->
-    </div><!-- end .smart-wrap section -->
-
-    <div></div><!-- end section -->
-
-</body>
-</html>
+<form method="post" action="/comment/send_mail.php">
+<p>
+<label>Your Name : 
+<input type="text" name="first_name" required>
+</label> 
+</p>
+<p>
+<label>Email : 
+<input type="email" name="email_address">
+</label>
+</p>
+<p>
+<label>Suggestion : 
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+<p><button>Submit the form</button></p>
+</form>
